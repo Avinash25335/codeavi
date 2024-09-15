@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+
+
+int stringLength(const std::string &str) {
+    return str.length();
+}
+
+
+int countCharacter(const std::string &str, char ch) {
+    int count = 0;
+    for (char c : str) {
+        if (c == ch) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+std::string concatenateStrings(const std::string &str1, const std::string &str2) {
+    return str1 + str2;
+}
+
+int main() {
+    std::string str1 = "Hello, World!";
+    std::cout << "Length of \"" << str1 << "\": " << stringLength(str1) << std::endl;
+
+ 
+    char character = 'l';
+    std::cout << "Number of occurrences of '" << character << "' in \"" << str1 << "\": " << countCharacter(str1, character) << std::endl;
+
+ 
+    std::string str2 = "Hello, ";
+    std::string str3 = "World!";
+    std::cout << "Concatenation of \"" << str2 << "\" and \"" << str3 << "\": " << concatenateStrings(str2, str3) << std::endl;
+
+    return 0;
+}
